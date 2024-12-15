@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Features</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    h1 {
+      color: var(--bs-primary);
+      margin-bottom: 20px;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .back-btn {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-primary text-center">Bootstrap Features Used</h1>
+    <p class="lead">
+      Below is a list of all the Bootstrap features used in the main resume file:
+    </p>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <b>Responsive Grid System:</b> 
+        Used `container`, `row`, and `col-md-*` to create a responsive layout.
+      </li>
+      <li class="list-group-item">
+        <b>Typography Utilities:</b> 
+        Classes like `text-center`, `fw-bold`, `text-muted`, and `text-primary` are applied to style text elements.
+      </li>
+      <li class="list-group-item">
+        <b>Buttons:</b> 
+        Used `btn`, `btn-primary`, and modal-related classes (`data-bs-toggle`, `data-bs-target`).
+      </li>
+      <li class="list-group-item">
+        <b>Modal:</b> 
+        Implemented a modal dialog (`modal`, `modal-dialog`, `modal-content`) for contact information.
+      </li>
+      <li class="list-group-item">
+        <b>Images:</b> 
+        Utilized `img-fluid` to make the sidebar profile picture responsive.
+      </li>
+      <li class="list-group-item">
+        <b>Spacing Utilities:</b> 
+        Classes like `mt-*`, `mb-*`, `pt-*`, `pb-*` are used to add consistent spacing.
+      </li>
+      <li class="list-group-item">
+        <b>Background and Text Colors:</b> 
+        Classes like `bg-dark`, `text-white`, `bg-primary`, and `text-warning` are applied.
+      </li>
+      <li class="list-group-item">
+        <b>Cards and Shadow:</b> 
+        Applied `shadow-lg` and `rounded` for card-like styling.
+      </li>
+      <li class="list-group-item">
+        <b>Flexbox:</b> 
+        Used flexbox utilities for alignment, such as `d-flex` for sidebar and layout responsiveness.
+      </li>
+      <li class="list-group-item">
+        <b>Responsive Design:</b> 
+        Media queries and Bootstrap's built-in responsive grid help the page adapt to different screen sizes.
+      </li>
+    </ul>
+
+    <!-- Back to Resume Button -->
+    <div class="text-center back-btn">
+      <button
+        type="button"
+        class="btn btn-primary"
+        onclick="window.open('../index.html', '_self')"
+      >
+        Back to Resume
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

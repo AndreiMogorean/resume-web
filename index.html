@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f5f7fa;
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        background: #fff;
+        max-width: 1200px;
+        margin: 20px auto;
+        box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+        display: flex;
+      }
+      .sidebar {
+        background-color: #343a40;
+        color: #fff;
+        flex: 1; /* Sidebar dynamically resizes with content */
+        min-width: 250px; /* Minimum width */
+        padding: 20px;
+        height: auto; /* No fixed height */
+      }
+      .my-photo {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      .sidebar h3 {
+        border-bottom: 1px solid #495057;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .sidebar a {
+        color: #d8dadd;
+        text-decoration: none;
+      }
+      .tech-skill-item,
+      .soft-skill-item {
+        color: #ff6b08;
+        margin-left: 15px;
+      }
+      .about-me-container {
+        flex: 2; /* About Me takes up more space dynamically */
+        padding: 20px;
+      }
+      .degree {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .name {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      .description {
+        font-size: 1rem;
+        margin-top: 24px;
+        line-height: 1.6;
+      }
+      .about-me-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 30px;
+      }
+      .experience-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #000;
+        margin-top: 20px;
+      }
+      .experience-company {
+        color: #ff7011;
+      }
+      .experience-time {
+        font-size: 0.875rem;
+        color: #a8a8a8;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .wrapper {
+          flex-direction: column; /* Stack elements on smaller screens */
+        }
+        .sidebar {
+          min-width: 100%; /* Full width */
+        }
+        .about-me-container {
+          padding: 15px;
+        }
+        .name {
+          font-size: 1.5rem;
+        }
+      }
+      @media (max-width: 576px) {
+        .about-me-container {
+          padding: 10px;
+        }
+        .name {
+          font-size: 1.25rem;
+        }
+        .description {
+          font-size: 0.875rem;
+        }
+        .about-me-title,
+        .experience-title {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+<!-- Js dynamic for daily greetings -->
+    <div id="greeting"></div>
+    <style>
+        #greeting {
+          font-size: 32px;
+          color: var(--bs-grey);
+          text-align: center;
+        }
+      </style>
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const greetingElement = document.getElementById("greeting");
+    
+          // Get the current hour of the day (0-23)
+          const currentHour = new Date().getHours();
+    
+          // Determine the greeting based on the time
+          let greetingMessage;
+          if (currentHour < 12) {
+            greetingMessage = "Good Morning!";
+          } else if (currentHour < 18) {
+            greetingMessage = "Good Afternoon!";
+          } else {
+            greetingMessage = "Good Evening!";
+          }
+    
+          // Update the #greeting element
+          greetingElement.textContent = greetingMessage;
+        });
+      </script>
+
+    <div class="container wrapper">
+      <!-- Sidebar Section -->
+      <aside class="sidebar">
+        <img
+          src="./img/cvphoto.jpg"
+          alt="My photo"
+          class="my-photo img-fluid"
+        />
+
+        <div>
+          <div class="tech-skill-container mt-4">
+            <h3>Tech Skills</h3>
+            <ul class="list-unstyled">
+              <li class="tech-skill-item">Python</li>
+              <li class="tech-skill-item">HTML5</li>
+              <li class="tech-skill-item">CSS3</li>
+              <li class="tech-skill-item">Bootstrap</li>
+              <li class="tech-skill-item">JavaScript</li>
+              <li class="tech-skill-item">NodeJs</li>
+              <li class="tech-skill-item">C#</li>
+              <li class="tech-skill-item">C++</li>
+              <li class="tech-skill-item">SQL</li>
+            </ul>
+          </div>
+
+          <div class="soft-skill-container mt-4">
+            <h3>Soft Skills</h3>
+            <ul class="list-unstyled">
+              <li class="soft-skill-item">Team player</li>
+              <li class="soft-skill-item">Self-motivated</li>
+              <li class="soft-skill-item">Seeking challenges</li>
+              <li class="soft-skill-item">Negotiation</li>
+              <li class="soft-skill-item">Positive attitude</li>
+              <li class="soft-skill-item">Attention to details</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- About Me Section -->
+      
+
+      <div class="about-me-container">
+        <div class="info-container">
+          <h2 class="degree">Computer Science Student</h2>
+          <h1 class="name">Andrei Mogorean</h1>
+          <p class="description">
+            A highly motivated computer science student. Seeking opportunities to be part of a
+            team and bring value by implementing innovative solutions.
+          </p>
+          <p class="description">
+            Enthusiastic about implementing my experience in programming languages and
+            paradigms, including Object-Oriented and Functional Programming. 
+          </p>
+          <p class="description">
+            Looking for an environment to improve technical and soft skills to
+            become a valuable team member.
+          </p>
+        </div>
+
+
+        <h3 class="about-me-title">Education</h3>
+        <div>
+            <h4 class="experience-title">
+              Computer Science /
+              <span class="experience-company">Technological University Dublin</span>
+            </h4>
+            <span class="experience-time">
+              Sept 2021 - Aug 2024 <span class="text-dark">|</span> In progress
+              <title>Countdown Timer</title>
+              <style>
+                #countdown {
+                  font-family: Arial, sans-serif;
+                  text-align: center;
+                  margin: 50px;
+                  color: #333;
+                }
+                #timer {
+                  font-size: 24px;
+                  font-weight: bold;
+                  margin-top: 20px;
+                  color: #ff6b08;
+                }
+              </style>
+            </head>
+            <body>
+                <!-- Countdown timer dynamic content -->
+              <div id="countdown">
+                <h2>Countdown to Graduation:</h2>
+                <p id="timer"></p>
+              </div>
+            
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  const targetDate = new Date("2025-06-01T00:00:00").getTime();
+            
+                  function updateCountdown() {
+                    const now = new Date().getTime();
+                    const timeLeft = targetDate - now;
+            
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+                    const timerElement = document.getElementById("timer");
+                    if (timeLeft > 0) {
+                      timerElement.textContent = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+                    } else {
+                      timerElement.textContent = "Congratulations! It's graduation day!";
+                      clearInterval(countdownInterval);
+                    }
+                  }
+            
+                  const countdownInterval = setInterval(updateCountdown, 1000);
+                  updateCountdown();
+                });
+              </script>
+
+            </span>
+            <ul class="mt-2">
+              <li class="experience-duties-item">
+                  <p><b>3rd Year Modules studied</b></p>
+                  <p> Experiential Learning(PASS); Service-Side Web Development(D); Operating System(C+); Innovation & Entrepreneurship(B); Cloud Service & Distrib Comp(C+); Big Data Technologies(C); Data Structures & Algorithms(B). Overal Grade:2.42</p>
+              </li>
+              <li class="experience-duties-item">
+                  <p><b>2nd Year Modules studied</b></p>
+                  <p>Software Development 3 (B); Software Quality Assurance and Testing (C); Advanced Database Technologies (C+); Network Fundamentals (D); Client-Side Web Development (B-); Discrete Mathematics 2 (B+); Software Development 4 (B); Project (C); Data Administration and Analysis (C); Routing & Switching Essentials(A); Information Security (C+); Management Science (A); Overall Grade: 2.65</p>
+              </li>
+              <li class="experience-duties-item">
+                  <p><b>1st Year Modules studied</b></p>
+                  <p> Visual Design and Used Experience (B); Computer Architecture (B+); Business & Information Systems (B+); Systems Analysis (C); Software Development 1 (B); Critical Skills Development (B+); Operating Systems Fundamentals (C+); Discrete Mathematics 1 (B+); Software Development 2 (C); Social Media Communications (B+); Database Fundamentals (B-). Overall Grade: 2.98</p>
+              </li>
+            </ul>
+        </div>
+        
+
+        <h3 class="about-me-title">Significant Projects</h3>
+        <div>
+            <h4 class="experience-title">
+              Car Rental Platform /
+              <span class="experience-company">Final project from 2nd year.</span>
+            </h4>
+            <ul class="mt-2">
+              <li class="experience-duties-item">
+                  <p><b>Description</b></p>
+                  <p>The project involved creating a car rental website that allowed customers to search for available cars based on location, date, and complex filters like price, car type, consumption, etc. with a user-friendly interface for making reservations and secure online payments. The system is capable of showing real-time information on car availability, reservation status, and other important data to optimize operations and provide the best possible service to customers.</p>
+              </li>
+            </ul>
+        </div>
+
+        <h3 class="about-me-title">Work Experience</h3>
+        <div>
+            <h4 class="experience-title">
+              Internship at
+              <span class="experience-company">Tallaght Hospital.</span>
+            </h4>
+            <span class="experience-time">
+                March 2024 - Sept 2024 <span class="text-dark"></span>
+            </span>
+            <ul class="mt-2">
+              <li class="experience-duties-item">
+                  <p><b>Main Responsibilities</b></p>
+                  <p> A notable achievement was developing a Python script to convert XSD schemas to SQL-compatible formats, utilizing xml.etree.ElementTree and pandas, which streamlined data integration and enhanced efficiency in managing complex data schemas. I also resolved UI consistency issues for Enteral Access Devices to ensure data integrity in FHIR storage and implemented logging mechanisms to minimize user-induced errors.
+
+                    I contributed to the Evolve Integrated Care (IC) platform by designing forms and workflows integrated with FHIR for clinical data management.
+                    
+                    Through this placement, I used technical skills like Python, SQL, version control, and healthcare IT standards (e.g., FHIR), while enhancing problem-solving, collaboration, and communication skills. </p>
+              </li>
+            </ul>
+        </div>
+
+        <h3 class="about-me-title">Project that I'm currently intrested in</h3>
+        <div>
+            <h4 class="experience-title">
+              4th year Project
+              <span class="experience-company">Technoligical University Dublin</span>
+            </h4>
+            <span class="experience-time">
+                Sept 2024 - Sept 2024 | In progress<span class="text-dark"></span>
+            </span>
+            <ul class="mt-2">
+              <li class="experience-duties-item">
+                  <p><b>Project Idea</b></p>
+                  <p> This project focuses on creating a comprehensive mobile app to assist users in managing their fitness and nutrition goals through features like personalized training programs, diet meal plans, a BMI calculator, and scheduling tools. By combining the strengths of SQL for secure authentication and MongoDB for user data flexibility, it ensures a smooth user experience. Barcode scanning for food items. It's creative and very attractive for those who value their health to combine nutrition, exercise, and progress tracking into one simple platform.</p>
+              </li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="experience-title">
+              Hobbies /
+              <span class="experience-company">Achievenments</span>
+            </h4>
+            <ul class="mt-2">
+              <li class="experience-duties-item">
+                  <p><b>Sport</b></p>
+                  <p>•	Finished second at youth swim competition for 250 meters in 2014 amongst all youngsters born in 2003.</p>
+                  <p>•	Got golden medal in Moldova Water-Polo championship between the national teams in 2016.</p>
+              </li>
+            </ul>
+            <ul class="mt-2">
+                <li class="experience-duties-item">
+                    <p><b>Proffesional</b></p>
+                    <p>•	Participated the Nvidia classes in Fundamentals of Deep Learning</p>
+                    <p>•	Was a part of Nucamp Bootcamp (Full-Stack development) where I develop my Java-Script skills and learn React with Mobile Application development.</p>
+                </li>
+              </ul>
+        </div>
+
+        <div class="about-me-container">
+          
+            <div class="mt-5">
+              <button
+                type="button"
+                class="btn btn-warning"
+                onclick="window.open('pages/bootstrap-features.html', '_blank')"
+              >
+                View Bootstrap Features
+              </button>
+        </div>
+
+        <div class="mt-5">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#contactModal"
+          >
+            Contact Me
+          </button>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Contact Information</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p><b>Phone:</b><a href="tel:+353834529130"> +353 83 452 9130</a></p>
+            <p><b>Email:</b> <a href="mailto:xzad66@gmail.com">xzad66@gmail.com</a></p>
+            <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/andrei-mogorean/">linkedin.com/in/andreimogorean</a></p>
+            <p><b>GitHub:</b> <a href="https://github.com/AndreiMogorean">github.com/andreimogorean</a></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
